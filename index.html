@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="嶋野成優 公式パートナープログラム。飲食店特化SNS運用代行(月44,000円・紹介フィー20-30%)とLP制作(5万円・OEM対応)で、あなたのビジネスにもう一本のキャッシュフローを。合同会社Four Seasons代表・嶋野成優が提供する代理店・紹介パートナー募集ページ。" />
+<title>パートナーシップ ／ 嶋野成優 ／ 香川発、200店舗を動かす26歳起業家</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-elev: #131313;
+    --fg: #f5f5f0;
+    --fg-mute: #888;
+    --line: #2a2a2a;
+    --accent: #c9a85c;          /* 古びた金 = Four Seasonsの実りのイメージ */
+    --accent-warm: #d96e3a;     /* 補色 = 行動を促す赤 */
+    --serif: 'Noto Serif JP', serif;
+    --display: 'Bodoni Moda', 'Noto Serif JP', serif;
+    --sans: 'Zen Kaku Gothic New', system-ui, -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    line-height: 1.8;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* グレイン質感 */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    z-index: 1000;
+    mix-blend-mode: overlay;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ──────────── HEADER ──────────── */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 18px 28px;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  header .brand { font-family: var(--serif); font-weight: 600; }
+  header .role { color: var(--fg-mute); font-size: 11px; }
+
+  /* ──────────── HERO ──────────── */
+  .hero {
+    min-height: 100vh;
+    padding: 140px 24px 80px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(201,168,92,0.08), transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(217,110,58,0.06), transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease forwards;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(36px, 8vw, 86px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.15s forwards;
+  }
+
+  .hero h1 .strike {
+    position: relative;
+    display: inline-block;
+  }
+  .hero h1 .strike::after {
+    content: '';
+    position: absolute;
+    left: -4%;
+    right: -4%;
+    top: 50%;
+    height: 4px;
+    background: var(--accent-warm);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: strike 0.8s ease 1.4s forwards;
+  }
+
+  .hero h1 .em {
+    color: var(--accent);
+    font-style: italic;
+    font-family: var(--display);
+    font-weight: 700;
+  }
+
+  .hero-sub {
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 2.1;
+    max-width: 620px;
+    color: #ddd;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.4s forwards;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 36px;
+    background: var(--fg);
+    color: var(--bg);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-start;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.55s forwards;
+  }
+  .hero-cta:hover {
+    background: var(--accent);
+    transform: translateX(4px);
+  }
+  .hero-cta::after {
+    content: '→';
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+  .hero-cta:hover::after { transform: translateX(4px); }
+
+  .hero-meta {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--fg-mute);
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+  .hero-meta::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: var(--fg-mute);
+    margin: 16px auto 0;
+    animation: scrollHint 2s ease infinite;
+  }
+
+  /* ──────────── SECTION COMMON ──────────── */
+  section { padding: 120px 24px; position: relative; }
+
+  .sec-num {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .sec-title {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(28px, 4.5vw, 52px);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 56px;
+    max-width: 900px;
+  }
+
+  .sec-title .em {
+    color: var(--accent);
+  }
+
+  .sec-lead {
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 2.1;
+    max-width: 720px;
+    color: #ccc;
+    margin-bottom: 56px;
+  }
+
+  /* ──────────── PROBLEM ──────────── */
+  .problem {
+    background: var(--bg-elev);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    margin-top: 56px;
+  }
+  .problem-item {
+    background: var(--bg-elev);
+    padding: 40px 32px;
+  }
+  .problem-item .num {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 36px;
+    color: var(--accent-warm);
+    margin-bottom: 16px;
+  }
+  .problem-item h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .problem-item p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  /* ──────────── PROOF (200店舗) ──────────── */
+  .proof {
+    text-align: center;
+    padding: 80px 24px 100px;
+    border-bottom: 1px solid var(--line);
+  }
+  .proof-eyebrow {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--fg-mute);
+    margin-bottom: 24px;
+  }
+  .proof-num {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(80px, 18vw, 200px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    background: linear-gradient(180deg, var(--accent), #6f5b30);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+  }
+  .proof-label {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    margin-bottom: 32px;
+  }
+  .proof-clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 32px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+  .proof-clients span::before { content: '◇'; margin-right: 8px; color: var(--accent); }
+
+  /* ──────────── PRODUCTS ──────────── */
+  .products { padding-bottom: 60px; }
+
+  .product-card {
+    border: 1px solid var(--line);
+    margin-bottom: 32px;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-elev), var(--bg));
+    position: relative;
+  }
+
+  .product-header {
+    padding: 48px 48px 32px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .product-header .tag {
+    display: inline-block;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .product-header h3 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(24px, 3.5vw, 38px);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .product-header .desc {
+    color: #bbb;
+    font-size: 15px;
+    max-width: 600px;
+    line-height: 2;
+  }
+
+  .product-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--line);
+  }
+
+  .product-cell {
+    background: var(--bg);
+    padding: 32px 36px;
+  }
+  .product-cell .label {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--fg-mute);
+    margin-bottom: 10px;
+  }
+  .product-cell .value {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .product-cell .value .small { font-size: 14px; color: var(--fg-mute); margin-left: 4px;}
+  .product-cell .note {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .product-cell .accent { color: var(--accent); }
+
+  /* ──────────── CALC ──────────── */
+  .calc {
+    background: var(--bg-elev);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .calc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .calc-card {
+    border: 1px solid var(--line);
+    padding: 40px 32px;
+    background: var(--bg);
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .calc-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+  .calc-card .scale {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--fg-mute);
+    margin-bottom: 12px;
+  }
+  .calc-card h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .calc-card .breakdown {
+    list-style: none;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .calc-card .breakdown li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #aaa;
+  }
+  .calc-card .total {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--accent);
+  }
+  .calc-card .total .label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--fg-mute);
+    margin-bottom: 4px;
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .calc-card .total .month {
+    font-size: 14px;
+    color: #999;
+    margin-left: 4px;
+    font-weight: 400;
+  }
+
+  /* ──────────── FLOW ──────────── */
+  .flow-list {
+    counter-reset: step;
+    list-style: none;
+    margin-top: 56px;
+  }
+  .flow-list li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .flow-list li:last-child { border-bottom: none; }
+  .flow-list li::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 48px;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 80px;
+  }
+  .flow-list h4 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .flow-list p {
+    color: #bbb;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  /* ──────────── FAQ ──────────── */
+  .faq {
+    background: var(--bg-elev);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  details {
+    border-bottom: 1px solid var(--line);
+    padding: 0;
+  }
+  details summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 28px 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+  }
+  details summary:hover { color: var(--accent); }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after {
+    content: '+';
+    font-family: var(--display);
+    font-size: 28px;
+    color: var(--accent);
+    transition: transform 0.3s;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details .answer {
+    padding: 0 0 28px;
+    color: #bbb;
+    line-height: 2;
+    font-size: 15px;
+    max-width: 800px;
+  }
+
+  /* ──────────── FINAL CTA ──────────── */
+  .final-cta {
+    text-align: center;
+    padding: 140px 24px;
+    position: relative;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, rgba(201,168,92,0.08), transparent 60%);
+    pointer-events: none;
+  }
+  .final-cta .quote {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--accent);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+  .final-cta h2 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(32px, 5.5vw, 56px);
+    line-height: 1.3;
+    margin-bottom: 32px;
+  }
+  .final-cta p {
+    color: #ccc;
+    max-width: 560px;
+    margin: 0 auto 48px;
+    line-height: 2.1;
+    font-size: 16px;
+  }
+  .final-cta .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 48px;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+    transition: all 0.3s;
+  }
+  .final-cta .cta-btn:hover {
+    background: var(--fg);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(201,168,92,0.3);
+  }
+  .final-cta .cta-sub {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--fg-mute);
+    letter-spacing: 0.2em;
+  }
+
+  /* ──────────── FOOTER ──────────── */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 24px 32px;
+    text-align: center;
+    color: var(--fg-mute);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+  footer .brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--fg);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  footer a:hover { color: var(--accent); }
+
+  /* ──────────── ANIMATIONS ──────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes strike {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  @keyframes scrollHint {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* スクロール時の出現 */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* レスポンシブ */
+
+  /* PC/SP切替えクラス */
+  .sp-br { display: none; }
+  .pc-br { display: inline; }
+
+  /* タブレット以下 */
+  @media (max-width: 900px) {
+    body { font-size: 15px; line-height: 1.85; }
+    section { padding: 90px 22px; }
+    .container { padding: 0 22px; }
+  }
+
+  /* スマートフォン */
+  @media (max-width: 640px) {
+    body { font-size: 14.5px; line-height: 1.85; }
+
+    /* 改行制御 */
+    .sp-br { display: inline; }
+    .pc-br { display: none; }
+
+    /* セクション余白 */
+    section { padding: 72px 20px; }
+    .container { padding: 0 20px; }
+
+    /* ヘッダー */
+    header {
+      padding: 13px 16px;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+    }
+    header .role { font-size: 9px; }
+
+    /* ヒーロー */
+    .hero { padding: 120px 20px 100px; }
+    .hero h1 {
+      font-size: 38px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      margin-bottom: 24px;
+    }
+    .hero-sub {
+      font-size: 14.5px;
+      line-height: 1.95;
+      margin-bottom: 36px;
+    }
+    .hero-cta {
+      padding: 18px 26px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      width: 100%;
+      justify-content: center;
+    }
+    .hero-meta {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      bottom: 24px;
+    }
+    .hero-meta::after { height: 28px; margin-top: 12px; }
+
+    /* セクション共通 */
+    .sec-num { font-size: 11px; letter-spacing: 0.25em; margin-bottom: 12px; }
+    .sec-title {
+      font-size: 27px;
+      line-height: 1.4;
+      margin-bottom: 36px;
+      letter-spacing: -0.005em;
+    }
+    .sec-lead { font-size: 14px; line-height: 2; margin-bottom: 36px; }
+
+    /* PROBLEM */
+    .problem-grid { margin-top: 36px; }
+    .problem-item { padding: 32px 24px; }
+    .problem-item .num { font-size: 28px; margin-bottom: 12px; }
+    .problem-item h3 { font-size: 16px; margin-bottom: 10px; }
+    .problem-item p { font-size: 13.5px; line-height: 1.85; }
+
+    /* PROOF */
+    .proof { padding: 64px 20px 80px; }
+    .proof-eyebrow { font-size: 11px; letter-spacing: 0.25em; margin-bottom: 18px; }
+    .proof-num { font-size: 96px; margin-bottom: 12px; }
+    .proof-label { font-size: 15px; letter-spacing: 0.08em; margin-bottom: 24px; }
+    .proof-clients {
+      gap: 12px 18px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+    }
+
+    /* PRODUCTS */
+    .products { padding-bottom: 36px; }
+    .product-card { margin-bottom: 24px; }
+    .product-header {
+      padding: 32px 24px 24px;
+    }
+    .product-header .tag {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      margin-bottom: 10px;
+    }
+    .product-header h3 {
+      font-size: 22px;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    .product-header .desc {
+      font-size: 14px;
+      line-height: 1.95;
+    }
+    .product-cell { padding: 26px 24px; }
+    .product-cell .label {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      margin-bottom: 8px;
+    }
+    .product-cell .value { font-size: 22px; }
+    .product-cell .value .small { font-size: 12px; }
+    .product-cell .note { font-size: 12px; line-height: 1.75; }
+
+    /* CALC */
+    .calc-grid { margin-top: 32px; gap: 18px; }
+    .calc-card { padding: 32px 24px; }
+    .calc-card .scale {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      margin-bottom: 10px;
+    }
+    .calc-card h4 { font-size: 16px; margin-bottom: 20px; line-height: 1.5; }
+    .calc-card .breakdown li { font-size: 12.5px; padding: 5px 0; }
+    .calc-card .total { font-size: 22px; }
+    .calc-card .total .label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      margin-bottom: 4px;
+    }
+    .calc-card .total .month { font-size: 12px; }
+
+    /* FLOW */
+    .flow-list { margin-top: 36px; }
+    .flow-list li {
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      padding: 26px 0;
+      align-items: start;
+    }
+    .flow-list li::before {
+      font-size: 32px;
+      min-width: 56px;
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .flow-list h4 { font-size: 17px; margin-bottom: 6px; line-height: 1.5; }
+    .flow-list p { font-size: 13.5px; line-height: 1.85; }
+
+    /* FAQ */
+    details summary {
+      padding: 22px 0;
+      font-size: 14.5px;
+      gap: 16px;
+      line-height: 1.5;
+    }
+    details summary::after { font-size: 22px; flex-shrink: 0; }
+    details .answer {
+      font-size: 13.5px;
+      line-height: 1.95;
+      padding-bottom: 22px;
+    }
+
+    /* FINAL CTA */
+    .final-cta { padding: 96px 20px 100px; }
+    .final-cta .quote {
+      font-size: 17px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .final-cta h2 {
+      font-size: 30px;
+      line-height: 1.4;
+      margin-bottom: 26px;
+    }
+    .final-cta p {
+      font-size: 14.5px;
+      line-height: 1.95;
+      margin-bottom: 36px;
+    }
+    .final-cta .cta-btn {
+      padding: 20px 28px;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      width: 100%;
+      justify-content: center;
+    }
+    .final-cta .cta-sub {
+      margin-top: 18px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 36px 20px 28px;
+      font-size: 11px;
+      line-height: 1.9;
+    }
+    footer .brand { font-size: 13px; }
+  }
+
+  /* 極小スマホ */
+  @media (max-width: 360px) {
+    .hero h1 { font-size: 32px; }
+    .sec-title { font-size: 23px; }
+    .product-header h3 { font-size: 19px; }
+    .proof-num { font-size: 80px; }
+    .final-cta h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">SEIYU SHIMANO</div>
+  <div class="role">FOR PARTNERS / KAGAWA</div>
+</header>
+
+<!-- ──────────── HERO ──────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">PARTNERSHIP PROGRAM 2026</div>
+    <h1>
+      紹介するだけで<br>
+      <span class="em">月収が積み上がる</span>。<br>
+      <span class="strike">単発の紹介手数料</span><br class="sp-br">では、ない。
+    </h1>
+    <p class="hero-sub">
+      合同会社Four Seasons代表・嶋野成優が、<br class="pc-br">
+      代理店・紹介パートナーを募集しています。<br><br>
+      飲食店特化のSNS運用代行と、LP制作。<br class="pc-br">
+      売る側ではなく「紹介するだけ」で、<br class="sp-br">
+      報酬が継続的に発生する仕組みをご用意しました。
+    </p>
+    <a href="https://line.me/ti/p/MG3SnqR9Sl" class="hero-cta" target="_blank" rel="noopener">LINEで30分面談を予約する</a>
+    <div class="hero-meta">SCROLL</div>
+  </div>
+</section>
+
+<!-- ──────────── PROBLEM ──────────── -->
+<section class="problem">
+  <div class="container">
+    <div class="sec-num">— 01 / PROBLEM</div>
+    <h2 class="sec-title">
+      「紹介ビジネス」が<br class="sp-br">機能しない<br class="pc-br">
+      <span class="em">3つの理由</span>。
+    </h2>
+    <p class="sec-lead">
+      コンサル、代理店、士業、Web制作、<br class="sp-br">SNS運用者、経営者ネットワーク。<br>
+      職種を問わず、多くの方が「紹介で売れる商材」を<br class="sp-br">探しているのに、なかなか定着しません。<br>
+      その理由は、構造的にハッキリしています。
+    </p>
+    <div class="problem-grid">
+      <div class="problem-item">
+        <div class="num">01</div>
+        <h3>商材の単発性</h3>
+        <p>1回紹介しても、報酬は1回きり。継続収入にならない商材ばかり。だから紹介する側の熱量が続かない。</p>
+      </div>
+      <div class="problem-item">
+        <div class="num">02</div>
+        <h3>納品クオリティの不安</h3>
+        <p>紹介した相手にガッカリされたら、自分の信頼まで失う。だから紹介に踏み切れない。</p>
+      </div>
+      <div class="problem-item">
+        <div class="num">03</div>
+        <h3>紹介後の関与の重さ</h3>
+        <p>紹介したのに自分が窓口になる、間に立たされる、トラブル対応をさせられる。これでは紹介=負債。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── PROOF ──────────── -->
+<section class="proof">
+  <div class="container">
+    <div class="proof-eyebrow">— TRACK RECORD</div>
+    <div class="proof-num">200+</div>
+    <div class="proof-label">支援飲食店舗数</div>
+    <p class="sec-lead" style="margin: 0 auto 32px; text-align: center;">
+      合同会社Four Seasonsが現在、<br class="sp-br">SNS運用代行で支援している飲食店舗数。<br>
+      自社で2店舗を実際に経営し、<br class="sp-br">現場で稼ぐ仕組みを動かしています。<br>
+      「机上の空論」ではない、<br class="sp-br">現場で証明済みのノウハウです。
+    </p>
+    <div class="proof-clients">
+      <span>鰻の成瀬本部</span>
+      <span>こがね製麺所</span>
+      <span>田所商店</span>
+      <span>花月嵐</span>
+      <span>ぴこぴこ精肉店</span>
+      <span>夜パフェBAR &amp; VIGO</span>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── PRODUCTS ──────────── -->
+<section class="products">
+  <div class="container">
+    <div class="sec-num">— 02 / PRODUCTS</div>
+    <h2 class="sec-title">
+      紹介できる、<br class="sp-br">
+      <span class="em">2つの商材</span>。
+    </h2>
+    <p class="sec-lead">
+      どちらも嶋野が現場で完結まで責任を持ちます。<br>
+      あなたは「紹介する」だけ。<br class="sp-br">納品も対応も、すべてこちらで請け負います。
+    </p>
+
+    <!-- PRODUCT 01 -->
+    <div class="product-card">
+      <div class="product-header">
+        <div class="tag">— PRODUCT 01</div>
+        <h3>飲食店特化 SNS運用代行</h3>
+        <p class="desc">
+          200店舗超で実証済みの、薄利多売モデル。<br>
+          月44,000円という導入しやすい価格設定で、<br class="sp-br">紹介後も毎月継続報酬が発生します。
+        </p>
+      </div>
+      <div class="product-body">
+        <div class="product-cell">
+          <div class="label">PRICE</div>
+          <div class="value">¥44,000<span class="small">／月(税込)</span></div>
+          <div class="note">飲食店オーナーが導入を決めやすい、適正価格設計。</div>
+        </div>
+        <div class="product-cell">
+          <div class="label">YOUR FEE</div>
+          <div class="value accent">20% – 30%</div>
+          <div class="note">継続契約中、毎月発生。<br>紹介実績・ボリュームに応じて率が変動します。</div>
+        </div>
+        <div class="product-cell">
+          <div class="label">YOUR WORK</div>
+          <div class="value">紹介のみ</div>
+          <div class="note">商談・契約・運用・改善・解約対応まで、すべて当社が担当。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 02 -->
+    <div class="product-card">
+      <div class="product-header">
+        <div class="tag">— PRODUCT 02</div>
+        <h3>LP制作 ／ OEM・紹介プラン</h3>
+        <p class="desc">
+          このページ自体が、提供するLPの<br class="sp-br">クオリティの実例です。<br>
+          OEM(あなたのブランドで販売)・紹介(成約手数料)、<br class="sp-br">用途に応じて2形態から選択できます。
+        </p>
+      </div>
+      <div class="product-body">
+        <div class="product-cell">
+          <div class="label">PLAN A ／ OEM</div>
+          <div class="value">¥50,000<span class="small">／案件</span></div>
+          <div class="note">仕入れ価格5万円。<br>あなたが販売価格を自由設定。<br>差額がそのまま利益になります。</div>
+        </div>
+        <div class="product-cell">
+          <div class="label">PLAN B ／ 紹介</div>
+          <div class="value accent">手数料20%</div>
+          <div class="note">仕入れ5万円に対する20%。<br>1案件1万円が即時発生。<br>顧客窓口は当社が担当。</div>
+        </div>
+        <div class="product-cell">
+          <div class="label">YOUR WORK</div>
+          <div class="value">紹介 or 営業</div>
+          <div class="note">OEMはあなたが営業・販売。<br>紹介はあなたが紹介のみ。<br>制作は当社で完結します。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── CALC ──────────── -->
+<section class="calc">
+  <div class="container">
+    <div class="sec-num">— 03 / SIMULATION</div>
+    <h2 class="sec-title">
+      「紹介数」と「報酬」の<br>
+      <span class="em">シミュレーション</span>。
+    </h2>
+    <p class="sec-lead">
+      SNS運用代行は1件の紹介で、<br class="sp-br">月8,800円〜13,200円の継続収入が発生します。<br>
+      積み上がっていくと、こうなります。
+    </p>
+    <div class="calc-grid">
+      <div class="calc-card">
+        <div class="scale">— SMALL</div>
+        <h4>月3件紹介できた場合</h4>
+        <ul class="breakdown">
+          <li><span>SNS代行 × 3件</span><span>¥26,400</span></li>
+          <li><span>(紹介フィー20%換算)</span><span>／月</span></li>
+        </ul>
+        <div class="total">
+          <span class="label">CONTINUOUS INCOME</span>
+          ¥26,400<span class="month">／月</span>
+        </div>
+      </div>
+      <div class="calc-card">
+        <div class="scale">— MEDIUM</div>
+        <h4>月10件紹介できた場合</h4>
+        <ul class="breakdown">
+          <li><span>SNS代行 × 10件</span><span>¥88,000</span></li>
+          <li><span>(紹介フィー20%換算)</span><span>／月</span></li>
+        </ul>
+        <div class="total">
+          <span class="label">CONTINUOUS INCOME</span>
+          ¥88,000<span class="month">／月</span>
+        </div>
+      </div>
+      <div class="calc-card">
+        <div class="scale">— LARGE</div>
+        <h4>累計30件 + LP月3件</h4>
+        <ul class="breakdown">
+          <li><span>SNS代行 × 30件(継続)</span><span>¥264,000</span></li>
+          <li><span>LP紹介 × 3件</span><span>¥30,000</span></li>
+        </ul>
+        <div class="total">
+          <span class="label">CONTINUOUS INCOME</span>
+          ¥294,000<span class="month">／月</span>
+        </div>
+      </div>
+    </div>
+    <p class="sec-lead" style="margin-top: 48px; font-size: 13px; color: var(--fg-mute);">
+      ※あくまでシミュレーションです。<br class="sp-br">実際の成果を保証するものではありません。<br>
+      ※紹介フィー率はパートナー契約により<br class="sp-br">変動します(20%〜30%)。
+    </p>
+  </div>
+</section>
+
+<!-- ──────────── FLOW ──────────── -->
+<section>
+  <div class="container">
+    <div class="sec-num">— 04 / FLOW</div>
+    <h2 class="sec-title">
+      パートナー登録から<br>
+      初回入金までの<br class="sp-br"><span class="em">流れ</span>。
+    </h2>
+    <ol class="flow-list">
+      <li>
+        <div>
+          <h4>LINE追加</h4>
+          <p>このページのCTAボタンから公式LINEを追加。「パートナー希望」とメッセージするだけで完了します。</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>30分のオンライン面談</h4>
+          <p>あなたの活動内容、想定紹介ルート、希望する商材(SNS代行 / LP / 両方)をすり合わせます。</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>パートナー契約</h4>
+          <p>紹介フィー率、支払い条件、紹介ツール(資料・LP・LINE)の提供方法を確認し、契約締結。</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>紹介開始</h4>
+          <p>紹介リンク・パートナーコードを発行。紹介後の商談・成約は当社が担当します。</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4>報酬発生・入金</h4>
+          <p>SNS代行は契約継続中、毎月発生。LPは成約・入金確認後に発生。月末締め・翌月末払い。</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ──────────── FAQ ──────────── -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="sec-num">— 05 / FAQ</div>
+    <h2 class="sec-title">よくあるご質問</h2>
+
+    <details>
+      <summary>紹介後、自分が間に立つ必要はありますか?</summary>
+      <div class="answer">いいえ、ありません。商談・契約・運用・改善・解約対応まで、すべて当社で完結します。あなたは「紹介する」だけで構いません。これは紹介者ご自身の信頼を守るための設計です。</div>
+    </details>
+    <details>
+      <summary>SNS運用代行の納品クオリティは大丈夫ですか?</summary>
+      <div class="answer">200店舗超の運用実績があり、鰻の成瀬本部、こがね製麺所、田所商店、花月嵐などの法人クライアントにもご利用いただいています。また当社は実際に飲食店2店舗を運営しているため、現場感覚に基づいた運用を行います。</div>
+    </details>
+    <details>
+      <summary>紹介フィーの20%と30%の違いは?</summary>
+      <div class="answer">紹介実績(継続契約数・継続率)に応じて変動します。初期は20%スタート、一定の実績を積んだ時点で30%に引き上げる契約形態が標準です。詳細は面談時にご説明します。</div>
+    </details>
+    <details>
+      <summary>LP制作のOEMと紹介、どちらがおすすめ?</summary>
+      <div class="answer">あなたの活動スタイルによります。<br>・自分で営業・販売したい方 → OEM(5万円仕入れ、価格自由設定)<br>・人を繋ぐだけにしたい方 → 紹介(5万円の20% = 1万円)<br>同じパートナー契約内で、案件ごとに使い分けることも可能です。</div>
+    </details>
+    <details>
+      <summary>業種が飲食店じゃないクライアントを紹介してもいい?</summary>
+      <div class="answer">SNS運用代行は飲食店特化のため、原則飲食業に限ります。LP制作は業種制限ありません。ただし当社の品質基準に合わない案件はお断りする場合があります。</div>
+    </details>
+    <details>
+      <summary>解約された場合、紹介フィーはどうなりますか?</summary>
+      <div class="answer">SNS運用代行は契約継続中のみフィーが発生します。クライアントが解約された月以降は発生しません。LP制作は1案件完結のため、入金確認後に確定します。</div>
+    </details>
+    <details>
+      <summary>個人でも、法人でも応募できますか?</summary>
+      <div class="answer">どちらも可能です。本業として/副業として/趣味の延長として、形態は問いません。<br>個人の方には個人として、法人の方には法人として、それぞれの形態に合わせた契約書をご用意します。<br>「自分は紹介できる人脈があるか不安」という方も、面談でルートを一緒に整理できますのでお気軽にどうぞ。</div>
+    </details>
+  </div>
+</section>
+
+<!-- ──────────── FINAL CTA ──────────── -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <div class="quote">— 売れる理由を、設計する。</div>
+    <h2>
+      あなたのビジネスに、<br>
+      もう一本の<br class="sp-br"><span style="color:var(--accent);">キャッシュフロー</span>を。
+    </h2>
+    <p>
+      パートナーシップは、<br class="sp-br">当社にとっても重要な選択です。<br>
+      面談を通じて、<br class="sp-br">お互いに長く組める相手かを<br class="sp-br">確認させてください。<br>
+      まずは30分、お話ししましょう。
+    </p>
+    <a href="https://line.me/ti/p/MG3SnqR9Sl" class="cta-btn" id="contactCTA" target="_blank" rel="noopener">
+      LINEを追加して応募する →
+    </a>
+    <div class="cta-sub">※30分無料オンライン面談 ／ LINEで48時間以内にご返信</div>
+  </div>
+</section>
+
+<!-- ──────────── FOOTER ──────────── -->
+<footer>
+  <div class="brand">SEIYU SHIMANO</div>
+  <div>合同会社Four Seasons ／ 株式会社やるけん ／ 2社代表</div>
+  <div style="margin-top: 16px;">
+    <a href="https://line.me/ti/p/MG3SnqR9Sl" target="_blank" rel="noopener" style="margin-right: 24px;">公式LINE</a>
+    <a href="https://simase4sea-netizen.github.io/shimanoseiyu/">公式プロフィール</a>
+  </div>
+  <div style="margin-top: 16px; opacity: 0.5;">© 2026 Four Seasons LLC. All rights reserved.</div>
+</footer>
+
+<script>
+  // スクロール時の出現
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section > .container > *').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
